@@ -30,32 +30,72 @@
     echo "FUNCTION 1 :" . myFunction1(7, 8);
     echo "<br>";
 
+    //Switch case:
     function BT2($n)
     {
         switch ($n) {
             case 2:
                 echo "Ngày thứ 2";
-                return;
+                break;
             case 3:
                 echo "Ngày thứ 3";
-                return;
+                break;
             case 4:
                 echo "Ngày thứ 4";
-                return;
+                break;
             case 5:
                 echo "Ngày thứ 5";
-                return;
+                break;
             case 6:
                 echo "Ngày thứ 6";
-                return;
+                break;
             case 7:
                 echo "Ngày thứ 7";
-                return;
+                break;
             default:
                 echo "Không phải ngày trong tuần";
-                return;
+                break;
         }
     }
+
     BT2(7);
 
+    //Vòng lặp: for, while, foreach, do while
+    for ($i = 1; $i < 10; $i++) {
+        echo $i . "<br>";
+    }/*
+    $i = 1;
+    while ($i < 10) {
+        echo $i;
+    }
+    do {
+        echo $i;
+    } while ($i < 10);*/
+
+
+    function BT3($n)
+    {
+        if ($n > 0 && $n <= 100) {
+
+            if ($n % 2 != 0 && $n % 3 != 0 && $n % 6 != 0){
+                echo "Không chia hết cho 2,3,6";
+                return;
+            }
+            if ($n % 6 == 0) {
+                echo  $n." Chia hết cho 6 <br>";
+                return;
+            } else {
+                if ($n % 2 == 0) {
+                    echo $n . " Chia hết cho 2 <br>";
+                }
+                if ($n % 3 == 0) {
+                    echo $n . " Chia hết cho 3 <br>";
+                }
+
+            }
+
+        }
+    }
+
+    BT3(15);
 ?>
